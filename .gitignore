@@ -4,3 +4,4 @@ coverage
 src/**/*.js
 yarn-error.log
 .rpt2_cache
+.idea

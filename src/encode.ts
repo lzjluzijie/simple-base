@@ -1,6 +1,6 @@
 import alphabet from './alphabet/constants'
 
-export function encode(source: string, base: 36 | 58) {
+export function encode(source: string, base: 32 | 36 | 58) {
   if (source === '') {
     return ''
   }

@@ -1,6 +1,6 @@
 import alphabetMap from './alphabet/index'
 
-export function decode(encoded: string, base: 36 | 58) {
+export function decode(encoded: string, base: 32 | 36 | 58) {
   const bytes = [0]
   let c: string
   let carry: number
