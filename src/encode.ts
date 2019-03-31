@@ -40,6 +40,19 @@ export function encode(source: string, base: 32 | 36 | 58) {
     i++
   }
 
+  // add padding for base32
+  if (base === 32) {
+    let result = digits
+      .reverse()
+      .map(digit => alphabet[base][digit])
+      .join('')
+
+    while (result.length % 8 !== 0) {
+      result += '='
+    }
+    return result
+  }
+
   return digits
     .reverse()
     .map(digit => alphabet[base][digit])

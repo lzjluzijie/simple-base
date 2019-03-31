@@ -11,6 +11,11 @@ export function decode(encoded: string, base: 32 | 36 | 58) {
     return ''
   }
 
+  // remove padding for base32
+  if (base === 32) {
+    encoded = encoded.substring(0, encoded.indexOf('='))
+  }
+
   while (i < encoded.length) {
     c = encoded[i]
 
